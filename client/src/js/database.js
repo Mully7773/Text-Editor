@@ -16,11 +16,10 @@ const initdb = async () =>
 export const putDb = async (content) => {
 console.log('PUT to the database');
 const jateDb = await openDB('jateDb', 1);
-//Changed from 'todo' to 'todos'
 //needs to be store name
 const tx = jateDb.transaction('jateDb', 'readwrite');
 const store = tx.objectStore('jateDb');
-const request = store.put({ id: id, value: content });
+const request = store.put({ id: 1, value: content });
 const result = await request;
 console.log('Your data has been saved to the database!', result);
 };
@@ -31,9 +30,8 @@ console.log('GET all from the database');
   const jateDb = await openDB('jateDb', 1);
   const tx = jateDb.transaction('jateDb', 'readonly');
   const store = tx.objectStore('jateDb');
-  const request = store.getAll();
+  const request = store.get(1);
   const result = await request;
-  console.log('result.value', result)
   return result;
 };
 initdb();
