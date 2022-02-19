@@ -32,6 +32,6 @@ console.log('GET all from the database');
   const store = tx.objectStore('jateDb');
   const request = store.get(1);
   const result = await request;
-  return result;
+  return result.value;
 };
 initdb();
