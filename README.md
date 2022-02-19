@@ -16,6 +16,7 @@ This is a single-page progressive web application called "JATE" or "Just-Another
 
 ## Link:
 See the deployed version of the website by visiting the following link:
+https://murmuring-lowlands-26712.herokuapp.com/
 
 ## Screenshot:
 
